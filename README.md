@@ -28,3 +28,15 @@
 | **Ролевая модель** | 6 уровней доступа (0–5) с разным набором команд |
 | **Управление помещениями** | Рабочие места с capacity, required_access_level |
 
+ Установка зависимостей
+pip install torch torchvision insightface ultralytics faiss-cpu pymongo opencv-python ipinfo pillow
+
+3. Запуск MongoDB
+# Docker
+docker run -d -p 27017:27017 --name mongodb mongo:latest
+
+# Или локально
+sudo systemctl start mongod
+
+4. Запуск приложения
+python main.py
